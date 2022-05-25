@@ -117,11 +117,11 @@ void MainWindow::queryTable(){
 //初始化时间
 void MainWindow::initTime(){
     if(isRest){
-        TimeRecord->setHMS(0,0,5);
+        TimeRecord->setHMS(0,0,rest);
         ui->Timer->display(TimeRecord->toString("hh:mm:ss"));
     }
     else{
-        TimeRecord->setHMS(0,0,2);
+        TimeRecord->setHMS(0,interval,0);
         ui->Timer->display(TimeRecord->toString("hh:mm:ss"));
     }
 
@@ -261,14 +261,17 @@ void MainWindow::on_bt_save_clicked()
     QSqlQuery query(db);
     query.prepare("update data set state=:state where name='restDuration'");
     data = ui->et_restDuration->text();
+    rest = data.toInt();
     query.bindValue(":state",data);
     query.exec();
     query.prepare("update data set state=:state where name='intervalDuration'");
     data = ui->et_intervalDuration->text();
+    interval = data.toInt();
     query.bindValue(":state",data);
     query.exec();
     query.prepare("update data set state=:state where name='title'");
     data = ui->et_title->text();
+    title = data;
     query.bindValue(":state",data);
     query.exec();
 }

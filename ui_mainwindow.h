@@ -74,12 +74,12 @@ public:
 
         et_title = new QLineEdit(centralwidget);
         et_title->setObjectName(QString::fromUtf8("et_title"));
-        QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Fixed);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(et_title->sizePolicy().hasHeightForWidth());
         et_title->setSizePolicy(sizePolicy1);
-        et_title->setMinimumSize(QSize(300, 40));
+        et_title->setMinimumSize(QSize(200, 40));
 
         gridLayout->addWidget(et_title, 5, 1, 1, 3);
 
@@ -87,7 +87,7 @@ public:
         et_intervalDuration->setObjectName(QString::fromUtf8("et_intervalDuration"));
         sizePolicy1.setHeightForWidth(et_intervalDuration->sizePolicy().hasHeightForWidth());
         et_intervalDuration->setSizePolicy(sizePolicy1);
-        et_intervalDuration->setMinimumSize(QSize(300, 40));
+        et_intervalDuration->setMinimumSize(QSize(200, 40));
 
         gridLayout->addWidget(et_intervalDuration, 3, 1, 1, 3);
 
@@ -112,7 +112,7 @@ public:
         et_restDuration->setObjectName(QString::fromUtf8("et_restDuration"));
         sizePolicy1.setHeightForWidth(et_restDuration->sizePolicy().hasHeightForWidth());
         et_restDuration->setSizePolicy(sizePolicy1);
-        et_restDuration->setMinimumSize(QSize(300, 40));
+        et_restDuration->setMinimumSize(QSize(200, 40));
         et_restDuration->setInputMethodHints(Qt::ImhNone);
         et_restDuration->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
@@ -120,16 +120,19 @@ public:
 
         bt_isOpen = new QPushButton(centralwidget);
         bt_isOpen->setObjectName(QString::fromUtf8("bt_isOpen"));
-        sizePolicy1.setHeightForWidth(bt_isOpen->sizePolicy().hasHeightForWidth());
-        bt_isOpen->setSizePolicy(sizePolicy1);
+        QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(bt_isOpen->sizePolicy().hasHeightForWidth());
+        bt_isOpen->setSizePolicy(sizePolicy2);
         bt_isOpen->setMinimumSize(QSize(40, 50));
 
         gridLayout->addWidget(bt_isOpen, 6, 1, 1, 1);
 
         bt_start = new QPushButton(centralwidget);
         bt_start->setObjectName(QString::fromUtf8("bt_start"));
-        sizePolicy1.setHeightForWidth(bt_start->sizePolicy().hasHeightForWidth());
-        bt_start->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(bt_start->sizePolicy().hasHeightForWidth());
+        bt_start->setSizePolicy(sizePolicy2);
         bt_start->setMinimumSize(QSize(130, 50));
         bt_start->setMaximumSize(QSize(50, 70));
         bt_start->setLayoutDirection(Qt::LeftToRight);
@@ -187,8 +190,8 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "20-20-20", nullptr));
-        label_2->setText(QCoreApplication::translate("MainWindow", "\344\274\221\346\201\257\346\227\266\351\225\277:", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "\351\227\264\351\232\224\346\227\266\351\225\277:", nullptr));
+        label_2->setText(QCoreApplication::translate("MainWindow", "\344\274\221\346\201\257\346\227\266\351\225\277(\347\247\222):", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "\344\275\277\347\224\250\346\227\266\351\225\277(\345\210\206\351\222\237):", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "\346\217\220\351\206\222\345\206\205\345\256\271:", nullptr));
         bt_isOpen->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
         bt_start->setText(QCoreApplication::translate("MainWindow", "\345\274\200\345\247\213\350\256\241\346\227\266", nullptr));

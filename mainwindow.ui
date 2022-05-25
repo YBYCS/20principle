@@ -37,21 +37,21 @@
          </font>
         </property>
         <property name="text">
-         <string>休息时长:</string>
+         <string>休息时长(秒):</string>
         </property>
        </widget>
       </item>
       <item row="5" column="1" colspan="3">
        <widget class="QLineEdit" name="et_title">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
         <property name="minimumSize">
          <size>
-          <width>300</width>
+          <width>200</width>
           <height>40</height>
          </size>
         </property>
@@ -60,14 +60,14 @@
       <item row="3" column="1" colspan="3">
        <widget class="QLineEdit" name="et_intervalDuration">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
         <property name="minimumSize">
          <size>
-          <width>300</width>
+          <width>200</width>
           <height>40</height>
          </size>
         </property>
@@ -93,7 +93,7 @@
          </font>
         </property>
         <property name="text">
-         <string>间隔时长:</string>
+         <string>使用时长(分钟):</string>
         </property>
        </widget>
       </item>
@@ -118,14 +118,14 @@
       <item row="4" column="1" colspan="3">
        <widget class="QLineEdit" name="et_restDuration">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
         <property name="minimumSize">
          <size>
-          <width>300</width>
+          <width>200</width>
           <height>40</height>
          </size>
         </property>
